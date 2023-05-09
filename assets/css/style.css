@@ -1,0 +1,195 @@
+/* importação de fonte externa */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap');
+
+/* declaração de variaveis para as cores e fontes */
+:root {
+  --offwhite: #FFFAE2;
+  --yellow-200: #FEFCAD;
+  --yellow-400: #E6E18F;
+  --yellow-600: #EADDA6;
+  --yellow-900: #92977E;
+
+  --os: 'Open Sans', sans-serif;
+  --rl: 'Raleway', sans-serif;
+}
+
+/* Reset de CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  width: 12px;
+  box-shadow: inset 0 0 .3rem #00000050;
+  background-color: #1D1C1A;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #E3E3E3;
+}
+
+:root {
+  scrollbar-color: #E3E3E3 #1D1C1A !important;
+  scrollbar-width: thin !important;
+}
+
+body {
+  /* utilizando variavel dentro do css */
+  background-color: var(--offwhite);
+  font-family: var(--os);
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  justify-content: end;
+  padding: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.75rem;
+  color: var(--yellow-900);
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  text-decoration: underline ;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: var(--rl);
+  font-weight: 700;
+  color: var(--yellow-900);
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: var(--yellow-600);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+}
+
+.banner img {
+  width: max(350px, 25vw);
+}
+
+.textos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.textos p {
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.secondary {
+  background-color: var(--yellow-400);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h2 {
+  font-family: var(--rl);
+  color: var(--yellow-900);
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.video {
+  width: 100%;
+  /* aspect-ratio mantem uma proporção entre largura e altura */
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+}
+
+.contato {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.contato div {
+  flex: 1;
+  width: 100%;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+input, textarea, button {
+  width: 100%;
+  resize: none;
+  border: 1px solid var(--yellow-900);
+  border-radius: 8px;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+}
+
+label {
+  font-family: var(--rl);
+  margin-left: 8px;
+  font-size: 1.25rem;
+}
+
+button {
+  border-width: 2px;
+  background-color: var(--yellow-600);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+button:hover {
+  transition: background .3s;
+  background-color: var(--yellow-900);
+}
+
+.mapa {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  aspect-ratio: 16/9;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid var(--yellow-900);
+}
+
+/* tudo que for colocado aqui pra baixo, é valido para telas menores de 1000px */
+@media (max-width: 1000px) {
+  .banner {
+    flex-direction: column-reverse;
+  }
+
+  .contato {
+    gap: 2rem;
+  }
+}
