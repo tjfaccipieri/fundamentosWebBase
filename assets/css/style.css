@@ -130,6 +130,7 @@ h2 {
   justify-content: space-around;
   align-items: center;
   margin-top: 1rem;
+  min-height: 70vh;
 }
 
 .contato div {
